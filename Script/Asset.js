@@ -1,4 +1,6 @@
-let img = {}
+let img = {
+    
+}
 
 function imageLoad() {
 
