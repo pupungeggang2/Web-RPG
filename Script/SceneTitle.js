@@ -12,10 +12,40 @@ function displayTitle() {
     context.fillText(`Erase Data`, UI.title.textErase[0], UI.title.textErase[1])
 }
 
+function keyDownTitle(key) {
+
+}
+
+function keyUpTitle(key) {
+    if (pause = false) {
+        if (state === '') {
+            if (key === 'ArrowUp' || key === 'w') {
+                if (selected.title > 0) {
+                    selected.title -= 1
+                }
+            } else if (key === 'ArrowDown' || key === 's') {
+                if (selected.title < 1) {
+                    selected.title += 1
+                }
+            }
+        }
+    }
+}
+
+function mouseDownTitle(x, y, button) {
+
+}
+
+function mouseMoveTitle(x, y) {
+
+}
+
 function mouseUpTitle(x, y, button) {
     if (button === 0) {
-        if (pause === '') {
-            if (state === '') {
+        if (pause === false) {
+            if (state === 'Load') {
+                state = ''
+            } else if (state === '') {
                 if (pointInsideRectArray(x, y, UI.title.buttonStart)) {
                     scene = 'Field'
                     state = ''
@@ -25,12 +55,4 @@ function mouseUpTitle(x, y, button) {
             }
         }
     }
-}
-
-function mouseMoveTitle(x, y) {
-
-}
-
-function mouseUpTitle(x, y, button) {
-
 }

@@ -46,6 +46,10 @@ function keyDown(event) {
     } else if (scene === 'Game') {
         keydownGame(key)
     }
+
+    if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight' || key === 'Space') {
+        event.preventDefault()
+    }
 }
 
 function keyUp(event) {
@@ -57,6 +61,10 @@ function keyUp(event) {
         keyUpField(key)
     } else if (scene === 'Game') {
         keyUpGame(key)
+    }
+
+    if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight' || key === 'Space') {
+        event.preventDefault()
     }
 }
 

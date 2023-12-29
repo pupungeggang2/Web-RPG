@@ -6,6 +6,14 @@ function displayField() {
     drawSceneInit()
 }
 
+function keyDownField(key) {
+
+}
+
+function keyUpField(key) {
+    
+}
+
 function mouseUpField(x, y, button) {
     if (button === 0) {
         if (pause === false) {
