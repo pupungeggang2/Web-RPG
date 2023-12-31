@@ -1,6 +1,7 @@
 const UI = {
     textTitle : [8, 8],
-    buttonMenu : [1160, 40, 80, 80],
+    buttonMenu : [1220, 20, 40, 40],
+    buttonPlayerInfo : [1220, 660, 40, 40],
 
     title : {
         buttonStart : [160, 160, 960, 160],
@@ -16,6 +17,14 @@ const UI = {
     },
 
     game : {
+        
+    },
 
+    playerInfo : {
+        rect : [160, 160, 960, 400],
+    },
+
+    menu : {
+        rect : [320, 240, 640, 240],
     },
 }

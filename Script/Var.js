@@ -22,6 +22,30 @@ let sessionVar = {
     
 }
 
+let graphic = {
+    playerMove : 0,
+}
+
+let field = {
+    place : 'HomeTowm',
+    playerPositionCoord : [],
+    playerPositionTile : [],
+    tile : [
+
+    ],
+
+    wall : [
+
+    ],
+
+    thing : [
+
+    ]
+}
+
+let player = {
+}
+
 let game = {
     
 }
