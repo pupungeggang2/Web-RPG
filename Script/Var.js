@@ -10,20 +10,23 @@ let scene = 'Title'
 let state = 'Load'
 let pause = false
 
-let inputKey = {
-    'up' : false, 'left' : false, 'down' : false, 'right' : false
+let pressed = {
+    'Up' : false, 'Left' : false, 'Down' : false, 'Right' : false
 }
 
 let selected = {
-    title : 0
+    title : 0,
+    menu : 0
 }
 
 let sessionVar = {
     
 }
 
-let graphic = {
-    playerMove : 0,
+let animation = {
+    playerMoveDistance : 0,
+    playerMoving : false,
+    playerDirection : 'S'
 }
 
 let field = {
