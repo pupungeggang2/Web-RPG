@@ -26,13 +26,16 @@ let sessionVar = {
 let animation = {
     playerMoveDistance : 0,
     playerMoving : false,
-    playerDirection : 'S'
+    playerDirection : 'D',
+    playerFrame : 0,
 }
 
 let field = {
-    place : 'HomeTowm',
+    place : 'HomeTown',
     playerPositionCoord : [],
     playerPositionTile : [],
+    cameraPosition : [],
+
     tile : [
 
     ],

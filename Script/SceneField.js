@@ -7,8 +7,8 @@ function displayField() {
     drawSceneInit()
     drawField()
 
-    context.strokeRect(UI.buttonMenu[0], UI.buttonMenu[1], UI.buttonMenu[2], UI.buttonMenu[3])
-    context.strokeRect(UI.buttonPlayerInfo[0], UI.buttonPlayerInfo[1], UI.buttonPlayerInfo[2], UI.buttonPlayerInfo[3])
+    context.drawImage(img.button.menu, UI.buttonMenu[0], UI.buttonMenu[1])
+    context.drawImage(img.button.info, UI.buttonPlayerInfo[0], UI.buttonPlayerInfo[1])
 
     if (pause === true) {
         drawMenu()
@@ -94,6 +94,9 @@ function mouseUpField(x, y, button) {
                     state = 'PlayerInfo'
                 }
             } else if (state === 'PlayerInfo') {
+                if (pointInsideRectArray(x, y, UI.buttonPlayerInfo)) {
+                    state = ''
+                }
             }
         } else if (pause === true) {
             if (pointInsideRectArray(x, y, UI.menu.buttonResume)) {

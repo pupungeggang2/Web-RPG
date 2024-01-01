@@ -11,7 +11,16 @@ function drawSceneInit() {
 }
 
 function drawField() {
-    context.fillRect(Math.floor(field.playerPositionCoord[0]), Math.floor(field.playerPositionCoord[1]), 40, 40)
+    for (let i = 0; i < field.tile.length; i++ ) {
+        for (let j = 0; j < field.tile[i].length; j++) {
+            if (field.tile[i][j] > 0) {
+                context.drawImage(img.tile[field.tile[i][j]], Math.floor(j * 40 - field.cameraPosition[0]), Math.floor(i * 40 - field.cameraPosition[1]))
+            }
+        }
+    }
+
+    let frame = Math.floor((animation.playerFrame % 16) / 8)
+    context.drawImage(img.player[animation.playerDirection][frame], Math.floor(field.playerPositionCoord[0] - field.cameraPosition[0]), Math.floor(field.playerPositionCoord[1] - field.cameraPosition[1]))
 }
 
 function drawPlayerInfo() {
